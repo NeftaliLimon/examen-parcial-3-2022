@@ -8,7 +8,7 @@ public class Item {
     int Quantity;
     BigDecimal UnitCost;
 
-    public Item(String itemCode, String providerCode, int quantity, BigDecimal unitCost ){
+    public Item(String itemCode, String providerCode,BigDecimal unitCost,int quantity){
         this.ItemCode = itemCode;
         this.ProviderCode = providerCode;
         this.Quantity = quantity;

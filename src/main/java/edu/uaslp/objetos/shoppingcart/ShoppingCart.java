@@ -16,7 +16,7 @@ public class ShoppingCart {
         BigDecimal totalCost = BigDecimal.ZERO;
         int size = shoppingCartList.size();
 
-        for(Item item: items){
+        for(Item item: shoppingCartList){
             totalCost = totalCost.add(item.getUnitCost().multiply(BigDecimal.valueOf(item.getQuantity())));
         }
 
@@ -37,5 +37,9 @@ public class ShoppingCart {
 
     public List<Item> getItems(){
         return shoppingCartList;
+    }
+
+    public void removeItem(String itemcode){
+        shoppingCartList.remove(itemcode);
     }
 }
